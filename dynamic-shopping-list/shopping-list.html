@@ -27,38 +27,29 @@
 
     <ul></ul>
 
-    <script></script>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping list example</title>
-    <style>
-      li {
-        margin-bottom: 10px;
+    <script>
+      const list = document.querySelector("ul");
+      const input = document.querySelector("input");
+      const addBtn = document.querySelector("button");
+
+      function onAddBtnClick(event) {
+        let currentValue = input.value;
+        input.value = "";
+
+        const listItem = document.createElement("li");
+        const span = document.createElement("span");
+        const delBtn = document.createElement("button");
+        listItem.appendChild(span);
+        listItem.appendChild(delBtn);
+        span.textContent = currentValue;
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", (event) => {
+          list.removeChild(listItem);
+        });
+        list.appendChild(listItem);
+        input.focus();
       }
-
-      li button {
-        font-size: 12px;
-        margin-left: 20px;
-        color: #666;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>My shopping list</h1>
-
-    <div>
-      <label for="item">Enter a new item:</label>
-      <input type="text" name="item" id="item" />
-      <button>Add item</button>
-    </div>
-
-    <ul></ul>
-
-    <script></script>
+      addBtn.addEventListener("click", onAddBtnClick);
+    </script>
   </body>
 </html>
