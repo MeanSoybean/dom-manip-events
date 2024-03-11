@@ -56,13 +56,13 @@ You can use _relational selectors_ such as `firstElementChild`, `lastElementChil
 
 ### Adding content
 
-[Compare](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText#examples) `HTML.innerText` with `Node.textContent`.
+[Compare](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText#examples) `HTML.innerText` to `Node.textContent`.
 
 Be careful about using [`innerHTML`](<https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#usage_notes:~:text=Note%3A%20This%20is%20a%20security%20risk%20if%20the%20string%20to%20be%20inserted%20might%20contain%20potentially%20malicious%20content.%20When%20inserting%20user%2Dsupplied%20data%20you%20should%20always%20consider%20using%20Element.setHTML()%20instead%2C%20in%20order%20to%20sanitize%20the%20content%20before%20it%20is%20inserted.>). Use [`element.setHTML()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/setHTML) instead to sanitize the HTML.
 
 # Events
 
-We can _listen_ to events such as mouse hover, keypresses, clicking, etc., and _fire_ functions when those events happen.
+We can _listen_ for events such as mouse hover, keypresses, clicking, etc., and _fire_ functions when those events happen.
 
 - Specify function attributes directly on the HTML elements.
 - Set properties of the form `on[eventType]` such as `onclick`, `onmousedown`, etc. on the DOM nodes using JavaScript
@@ -113,7 +113,7 @@ By using `addEventListener(eventType, listener)`, you are either adding:
 
 to the list of event listeners for the specified `eventType`. The function or handleEvent()-implementing object is called the _event listener_ (that's why it is added to the list of event listeners).
 
-> **Terminology**: Event listeners are also referred to interchangeably as event handlers. Rigorously speaking, "event listener" waits for the event to happen, and "event handler" is the actual code that does something when the event happens.
+> **Terminology**: Event listeners are also referred to, interchangeably, as event handlers. Rigorously speaking, "event listener" waits for the event to happen, and "event handler" is the actual code that does something when the event happens.
 
 Repeatedly calling addEventListener for the same event and the same listener will not add it to the list a second time.
 
