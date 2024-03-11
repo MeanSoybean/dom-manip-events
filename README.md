@@ -62,7 +62,7 @@ Be careful about using [`innerHTML`](<https://developer.mozilla.org/en-US/docs/W
 
 # Events
 
-We can _listen_ to events such as mouse hover, keypresses, clicking, etc., and _fire_ functions when those events happen.
+We can _listen_ for events such as mouse hover, keypresses, clicking, etc., and _fire_ functions when those events happen.
 
 - Specify function attributes directly on the HTML elements.
 - Set properties of the form `on[eventType]` such as `onclick`, `onmousedown`, etc. on the DOM nodes using JavaScript
